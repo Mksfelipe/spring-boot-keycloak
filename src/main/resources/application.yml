@@ -3,10 +3,8 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          issuer-uri: http://127.0.0.1:8080/realms/SpringBootKeycloak
+          issuer-uri: http://172.21.23.199:8080/realms/Spring-login
           jwk-set-uri: ${spring.security.oauth2.resourceserver.jwt.issuer-uri}/protocol/openid-connect/certs
-server:
-  port: 9090
 
 jwt:
   auth:
@@ -14,3 +12,5 @@ jwt:
       resource-id: login-app
       principle-attribute: preferred_username
       
+server:
+  port: 9090
